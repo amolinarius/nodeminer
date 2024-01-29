@@ -1,0 +1,28 @@
+{
+  "name": "mineflayer-testbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx .",
+    "test": "nodemon --exec \"npx tsx .\" -e js,json,ts ."
+  },
+  "author": "amolinarius",
+  "license": "MIT",
+  "dependencies": {
+    "mineflayer": "^4.18.0",
+    "mineflayer-armor-manager": "^2.0.1",
+    "mineflayer-auto-eat": "^3.3.6",
+    "prismarine-entity": "^2.4.0",
+    "prismarine-item": "^1.14.0",
+    "prismarine-viewer": "^1.28.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3",
+    "tsx": "^4.7.0"
+  },
+  "nodemonConfig": {
+    "delay": 5000
+  }
+}

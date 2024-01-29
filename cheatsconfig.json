@@ -1,0 +1,21 @@
+{
+    "KillAura": {
+        "enabled": true,
+        "friends": [
+            "furiousfurie",
+            "poisonousPotato"
+        ],
+        "maxReach": 6.5
+    },
+    "AutoLog": {
+        "enabled": false,
+        "minHealth": 8
+    },
+    "AutoArmor": {
+        "enabled": true
+    },
+    "AutoEat": {
+        "enabled": true,
+        "offhand": false
+    }
+}
