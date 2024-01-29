@@ -1,10 +1,7 @@
 {
     "KillAura": {
         "enabled": true,
-        "friends": [
-            "furiousfurie",
-            "poisonousPotato"
-        ],
+        "friends": [],
         "maxReach": 6.5
     },
     "AutoLog": {
