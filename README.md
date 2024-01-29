@@ -32,7 +32,6 @@ To login to a Microsoft account, you must add the following arguments :
 ```js
 const bot = mineflayer.createBot({
     host: 'exampleip.com',
-    port: 25565,
     auth: 'microsoft',
     username: 'microsoftAccountEmail@gmail.com',
     password: 'supersecretpassword'
