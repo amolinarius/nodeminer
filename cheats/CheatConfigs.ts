@@ -14,7 +14,8 @@ export interface AutoEatConfig extends CheatConfig {
 }
 export interface SpamConfig extends CheatConfig {
     messages?: string[],
-    delay?: number
+    delay?: number,
+    randomize?: boolean
 }
 
 export interface CheatConfig {

@@ -111,6 +111,7 @@ Default :
 - enabled: boolean
 - messages: string[] (List of messages or commands to send)
 - delay: number (Delay between messages)
+- randomize: boolean (Whether or not to choose message randomly. **It won't send the same message twice in a row, enable it only if you have at least 3 messages**)
 
 Default :
 ```json
@@ -120,7 +121,8 @@ Default :
         "messages": [
             "Hello"
         ],
-        "delay": 1000
+        "delay": 1000,
+        "randomize": false
     }
 }
 ```
