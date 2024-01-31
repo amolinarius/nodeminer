@@ -12,10 +12,6 @@ export interface AutoEatConfig extends CheatConfig {
     bannedFood?: string[],
     offhand?: boolean
 }
-export interface AutoEzConfig extends CheatConfig {
-    maxRange?: number,
-    sendIfPopTotem?: boolean
-}
 
 export interface CheatConfig {
     enabled: boolean
