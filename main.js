@@ -8,6 +8,7 @@ import KillAura from './cheats/KillAura.ts';
 import AutoLog from './cheats/AutoLog.ts';
 import AutoArmor from './cheats/AutoArmor.ts';
 import AutoEat from './cheats/AutoEat.ts';
+import Spam from './cheats/Spam.ts';
 
 //. Create Bot
 const bot = mineflayer.createBot({
@@ -37,6 +38,7 @@ if (AutoLog.enabled) AutoLog.main(bot);
 if (AutoArmor.enabled) AutoArmor.main(bot);
 if (AutoEat.enabled) AutoEat.main(bot);
 else bot.autoEat.disable();
+if (Spam.enabled) Spam.main(bot);
 
 //. Handle Disconnection
 bot.on('kicked', (reason)=>console.log(`${bot.username} has been kicked. Reason : ${reason}`));

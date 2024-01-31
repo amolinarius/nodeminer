@@ -14,5 +14,11 @@
     "AutoEat": {
         "enabled": true,
         "offhand": false
+    },
+    "Spam": {
+        "enabled": false,
+        "messages": [
+            "Hello"
+        ]
     }
 }

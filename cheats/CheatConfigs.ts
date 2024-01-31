@@ -12,6 +12,10 @@ export interface AutoEatConfig extends CheatConfig {
     bannedFood?: string[],
     offhand?: boolean
 }
+export interface SpamConfig extends CheatConfig {
+    messages?: string[],
+    delay?: number
+}
 
 export interface CheatConfig {
     enabled: boolean

@@ -106,3 +106,21 @@ Default :
     }
 }
 ```
+
+### Spam
+- enabled: boolean
+- messages: string[] (List of messages or commands to send)
+- delay: number (Delay between messages)
+
+Default :
+```json
+{
+    "Spam": {
+        "enabled": false,
+        "messages": [
+            "Hello"
+        ],
+        "delay": 1000
+    }
+}
+```
