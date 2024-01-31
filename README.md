@@ -14,7 +14,7 @@ If you want to automatically restart it if you make any changes, then run `npm t
 There's a kind of freecam that you can access through your browser to see the chunks around the bot.  
 To access it, just go to your browser and type the URL `localhost`. It will open it.  
 > [!NOTE]
-> You mzy need to interact with the chunks for the webview to load them
+> You may need to interact with the chunks for the webview to load them
 
 > [!NOTE]
 > There can be some bugs with the new blocks, as the bot won't understand these blocks and so won't load their textures
