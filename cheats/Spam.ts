@@ -30,7 +30,6 @@ class Spam extends Cheat {
                 }
             }, delay);
         });
-        console.log('Loaded Spam');
     }
 }
 

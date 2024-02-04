@@ -12,7 +12,6 @@ class AutoArmor extends Cheat {
         bot.on('physicsTick', ()=>{
             if (!bot.autoEat.isEating) bot.armorManager.equipAll();
         });
-        console.log('Loaded AutoArmor');
     }
 }
 

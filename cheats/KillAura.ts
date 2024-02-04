@@ -24,7 +24,6 @@ class KillAura extends Cheat {
             bot.lookAt(pos, true).then(()=>bot.attack(mob));
 
         });
-        console.log('Loaded KillAura');
     }
 }
 

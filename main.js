@@ -3,12 +3,7 @@ import mineflayer from 'mineflayer';
 import { mineflayer as viewer } from 'prismarine-viewer';
 import armorManager from 'mineflayer-armor-manager';
 import autoeat from 'mineflayer-auto-eat';
-
-import KillAura from './cheats/KillAura.ts';
-import AutoLog from './cheats/AutoLog.ts';
-import AutoArmor from './cheats/AutoArmor.ts';
-import AutoEat from './cheats/AutoEat.ts';
-import Spam from './cheats/Spam.ts';
+import fs from 'fs';
 
 //. Create Bot
 const bot = mineflayer.createBot({
@@ -33,12 +28,20 @@ bot.once('spawn', ()=>{
 console.clear();
 
 //. Load Cheats
-if (KillAura.enabled) KillAura.main(bot);
-if (AutoLog.enabled) AutoLog.main(bot);
-if (AutoArmor.enabled) AutoArmor.main(bot);
-if (AutoEat.enabled) AutoEat.main(bot);
-else bot.autoEat.disable();
-if (Spam.enabled) Spam.main(bot);
+const blacklist = ['Cheat.ts', 'CheatConfigs.ts'];
+const cheats = fs.readdirSync('./cheats').filter(f=>(f.endsWith('.ts') || f.endsWith('.js')) && !blacklist.includes(f)).map(f=>f.slice(0, f.length-3));
+for (const cheat of cheats) {
+    const module = (await import(`./cheats/${cheat}`)).default;
+    const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(module));
+    if (module.enabled) {
+        module.main(bot);
+        console.log(`Loaded ${cheat}`);
+    }
+    else if (methods.indexOf('ifDisabled')!=-1) {
+        module.ifDisabled(bot);
+        console.log(`Loaded ${cheat} fallback because it was disabled`);
+    }
+}
 
 //. Handle Disconnection
 bot.on('kicked', (reason)=>console.log(`${bot.username} has been kicked. Reason : ${reason}`));

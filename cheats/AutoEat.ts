@@ -15,7 +15,10 @@ class AutoEat extends Cheat {
             if (this.config.bannedFood) bot.autoEat.options.bannedFood = this.config.bannedFood;
             if (this.config.offhand) bot.autoEat.options.offhand = this.config.offhand;
         });
-        console.log('Loaded AutoEat');
+    }
+
+    ifDisabled(bot: mineflayer.Bot): void {
+        bot.autoEat.disable();
     }
 }
 

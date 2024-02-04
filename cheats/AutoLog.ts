@@ -28,7 +28,6 @@ class AutoLog extends Cheat {
                 lastHealth = bot.health;
             });
         })
-        console.log('Loaded AutoLog');
     }
 }
 
