@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { CheatConfig } from './CheatConfigs';
+import config from '../cheatsconfig.cjs';
 
 export default class Cheat {
     name: String;
@@ -9,8 +10,6 @@ export default class Cheat {
     constructor(name: String, desc: String) {
         this.name = name;
         this.desc = desc;
-        var config: object;
-        config = JSON.parse(fs.readFileSync('./cheatsconfig.cjs').toString());
         this.config = config[name.toString()] || {enabled: true};
     }
 
