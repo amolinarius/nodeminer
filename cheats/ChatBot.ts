@@ -11,6 +11,7 @@ class ChatBot extends Cheat {
     main(bot: mineflayer.Bot): void {
         bot.once('spawn', ()=>{
             bot.on('chat', (user, msg)=>{
+                if (user === bot.username) {return}
                 const action = this.config.executions?.find(exec=>{
                     if (typeof(exec.test) == 'string') {return exec.test == msg}
                     else if (isRegex(exec.test)) {return exec.test.test(msg)}
