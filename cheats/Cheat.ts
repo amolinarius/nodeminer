@@ -10,7 +10,7 @@ export default class Cheat {
         this.name = name;
         this.desc = desc;
         var config: object;
-        config = JSON.parse(fs.readFileSync('./cheatsconfig.json').toString());
+        config = JSON.parse(fs.readFileSync('./cheatsconfig.cjs').toString());
         this.config = config[name.toString()] || {enabled: true};
     }
 

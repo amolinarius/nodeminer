@@ -39,7 +39,7 @@ const bot = mineflayer.createBot({
 ```
 
 ## Modifying cheats settings
-All the configuration is in the `cheatsconfig.json` file.  
+All the configuration is in the `cheatsconfig.cjs` file.  
 So, to toggle a cheat or modifiy its settings, you'll need to edit it.  
 In the file, type the name of the cheat between quotes and add a colon, followed by a curly bracket.  
 The list of all configs for the cheats will be described below, but, as for now, you can type `"enabled": true` to enable a cheat and `"enabled": false` to disable it.
