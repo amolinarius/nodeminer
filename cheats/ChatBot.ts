@@ -16,7 +16,7 @@ class ChatBot extends Cheat {
                     if (typeof(exec.test) == 'string') {return exec.test == msg}
                     else if (isRegex(exec.test)) {return exec.test.test(msg)}
                     else {
-                        console.error("[ChatBpt] Invalid test syntax : "+exec.test);
+                        console.error("[ChatBot] Invalid test syntax : "+exec.test);
                         return false;
                     }
                 });
