@@ -24,6 +24,15 @@ bot.once('spawn', ()=>{
     // setTimeout(()=>bot.chat('/skin url https://imgur.com/6OnKkaL'), 5000)
 });
 
+//. Handle errors
+bot.on('error', err=>{
+    console.log('Catched error '+err.code);
+    if (err.code == 'ECONNREFUSED') {
+        console.log('Unknown Server IP, performing clean exit.');
+        process.exit(0);
+    }
+})
+
 //. Clear terminal
 console.clear();
 
