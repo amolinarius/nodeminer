@@ -107,6 +107,27 @@ Default :
 }
 ```
 
+### ChatBot
+
+- enabled: boolean
+- executions: object[] (Array of rules about when to send message/command)
+- executions.test: string|RegExp (Pattern or literal that must match)
+- executions.message: string (Message to send back)
+
+Default :
+
+```js
+{
+    "ChatBot": {
+        "enabled": true,
+        "executions": [
+            {"test": "bot", "message": "NodeMiner"},
+            {"test": /.*bot.*/m, "message": "NodeMiner"}
+        ]
+    }
+}
+```
+
 ### KillAura
 
 - enabled: boolean

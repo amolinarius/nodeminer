@@ -17,6 +17,9 @@ export interface SpamConfig extends CheatConfig {
     delay?: number,
     randomize?: boolean
 }
+export interface ChatBotConfig extends CheatConfig {
+    executions?: {test: RegExp|string, message: string}[]
+}
 
 export interface CheatConfig {
     enabled: boolean

@@ -20,5 +20,12 @@ module.exports = {
         messages: [
             "Hello"
         ]
+    },
+    ChatBot: {
+        enabled: true,
+        executions: [
+            {test: 'bot', message: 'NodeMiner'},
+            {test: /.*bot.*/m, message: 'NodeMiner'}
+        ]
     }
 }
