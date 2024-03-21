@@ -23,7 +23,6 @@ class ChatBot extends Cheat {
                 if (action) {
                     bot.chat(action.message);
                 }
-                console.log(`[ChatBot] <${user}> ${msg}`);
             });
         })
     }
