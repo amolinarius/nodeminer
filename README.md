@@ -157,9 +157,9 @@ Default :
 > [!TIP]
 > The messages in `executions.test` only works with private messages from allowed authors, which are none by default.  
 
-| Actions                           | Description                                     | Keywords                                               |
-|-----------------------------------|-------------------------------------------------|--------------------------------------------------------|
-| Say \<message>                    | Makes the bot send `message` to the global chat | **%p**: The original author of the message             |
+| Actions                           | Description                                     | Keywords                                                                                                                                                       |
+|-----------------------------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Say \<message>                    | Makes the bot send `message` to the global chat | **%p**: The original author of the message                                                                                                                     |
 | Whisper \<player> \<message>      | Makes the bot send `message` to `player`        | **%msg**: The original message that was sent to the bot <br/> **%msg:\<digit>**: The original message that was sent to the bot, sliced from `digit` characters |
 
 Default :
