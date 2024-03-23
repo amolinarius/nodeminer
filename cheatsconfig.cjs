@@ -27,5 +27,12 @@ module.exports = {
             {test: 'bot', message: 'NodeMiner'},
             {test: /.*bot.*/m, message: 'NodeMiner'}
         ]
+    },
+    MessageSwarm: {
+        enabled: true,
+        executions: [
+            {test: /swarm/m, action: 'Whisper %p MessageSwarm is working'},
+            {test: /say .*/m, action: 'Say %msg:4'}
+        ]
     }
 }

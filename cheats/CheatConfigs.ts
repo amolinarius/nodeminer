@@ -20,6 +20,10 @@ export interface SpamConfig extends CheatConfig {
 export interface ChatBotConfig extends CheatConfig {
     executions?: {test: RegExp|string, message: string}[]
 }
+export interface MessageSwarmConfig extends CheatConfig {
+    authors?: string[],
+    executions?: {test: RegExp|string, action: string}[]
+}
 
 export interface CheatConfig {
     enabled: boolean

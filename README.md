@@ -146,6 +146,37 @@ Default :
 }
 ```
 
+### MessageSwarm
+
+- enabled: boolean
+- executions: object[] (Array of rules about when to perform action)
+- executions.test: string|RegExp (Pattern or literal that must match)
+- executions.action: string (Action that the bot will do, allowed actions are written below)
+- authors: string[] (Authors that are allowed to perform the actions)
+
+> [!TIP]
+> The messages in `executions.test` only works with private messages from allowed authors, which are none by default.  
+
+| Actions                           | Description                                     | Keywords                                               |
+|-----------------------------------|-------------------------------------------------|--------------------------------------------------------|
+| Say \<message>                    | Makes the bot send `message` to the global chat | **%p**: The original author of the message             |
+| Whisper \<player> \<message>      | Makes the bot send `message` to `player`        | **%msg**: The original message that was sent to the bot <br/> **%msg:\<digit>**: The original message that was sent to the bot, sliced from `digit` characters |
+
+Default :
+
+```js
+{
+    "MessageSwarm": {
+        "enabled": true,
+        "executions": [
+            {"test": /swarm/m, "action": 'Whisper %p MessageSwarm is working'},
+            {"test": /say .*/m, "action": 'Say %msg:4'}
+        ],
+        "authors": []
+    }
+}
+```
+
 ### Spam
 
 - enabled: boolean
