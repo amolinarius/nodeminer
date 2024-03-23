@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "npx tsx .",
-    "test": "nodemon --exec \"npx tsx .\" -e js,json,ts ."
+    "test": "nodemon --exec \"npx tsx .\" -e js,json,ts,cjs ."
   },
   "author": "amolinarius",
   "license": "MIT",
