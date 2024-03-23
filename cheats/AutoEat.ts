@@ -13,6 +13,7 @@ class AutoEat extends Cheat {
             if (this.config.minFood) bot.autoEat.options.startAt = this.config.minFood;
             if (this.config.priority) bot.autoEat.options.priority = this.config.priority;
             if (this.config.bannedFood) bot.autoEat.options.bannedFood = this.config.bannedFood;
+            else bot.autoEat.options.bannedFood.push('enchanted_golden_apple');
             if (this.config.offhand) bot.autoEat.options.offhand = this.config.offhand;
         });
     }

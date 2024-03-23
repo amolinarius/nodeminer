@@ -85,7 +85,7 @@ Default :
         "enabled": true,
         "minFood": 16,
         "priority": "saturation",
-        "bannedFood": ["pufferfish", "spider_eye", "poisonous_potato", "rotten_flesh", "chorus_fruit", "chicken", "suspicious_stew", "golden_apple"],
+        "bannedFood": ["pufferfish", "spider_eye", "poisonous_potato", "rotten_flesh", "chorus_fruit", "chicken", "suspicious_stew", "golden_apple", "enchanted_golden_apple"],
         "offhand": false
     }
 }
