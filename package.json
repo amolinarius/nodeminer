@@ -11,7 +11,7 @@
   "author": "amolinarius",
   "license": "MIT",
   "dependencies": {
-    "mineflayer": "^4.18.0",
+    "mineflayer": "^4.20.0",
     "mineflayer-armor-manager": "^2.0.1",
     "mineflayer-auto-eat": "^3.3.6",
     "prismarine-entity": "^2.4.0",
