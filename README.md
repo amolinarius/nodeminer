@@ -85,7 +85,7 @@ Default :
         "enabled": true,
         "minFood": 16,
         "priority": "saturation",
-        "bannedFood": ["pufferfish", "spider_eye", "poisonous_potato", "rotten_flesh", "chorus_fruit", "chicken", "suspicious_stew", "golden_apple"],
+        "bannedFood": ["pufferfish", "spider_eye", "poisonous_potato", "rotten_flesh", "chorus_fruit", "chicken", "suspicious_stew", "golden_apple", "enchanted_golden_apple"],
         "offhand": false
     }
 }
@@ -161,6 +161,14 @@ Default :
 |-----------------------------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Say \<message>                    | Makes the bot send `message` to the global chat | **%p**: The original author of the message                                                                                                                     |
 | Whisper \<player> \<message>      | Makes the bot send `message` to `player`        | **%msg**: The original message that was sent to the bot <br/> **%msg:\<digit>**: The original message that was sent to the bot, sliced from `digit` characters |
+
+**Actions Roadmap**
+- [X] Say
+- [X] Whisper
+- [ ] Attack \<player>
+- [ ] Place \<block|slotIndex>
+- [ ] Follow \<player>
+
 
 Default :
 
