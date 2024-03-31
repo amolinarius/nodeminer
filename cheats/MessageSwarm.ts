@@ -35,20 +35,15 @@ class MessageSwarm extends Cheat {
                 else if (command === 'say') {
                     var message = args.join(' ');
                     const msgPartRegex = /%msg:(?:\d+|\*)/;
-                    console.log(msgPartRegex.exec(args.join(' ')), msgPartRegex.exec(message));
 
                     while (msgPartRegex.test(message)) {
                         var coords: RegExpExecArray|string|null = msgPartRegex.exec(message);
-                        console.log('xxx', coords);
                         if (!coords) {continue}
                         coords = coords[0];
-                        console.log('abc', coords, coords.split(':')[1]);
                         message = message.replace(msgPartRegex, msg.slice(parseInt(coords.split(':')[1])))
                     }
                     bot.chat(replaceAll(message, '%msg', msg));
                 }
-                console.log('whisper of '+user+': '+msg); 
-                console.log(action);
             });
         })
     }
